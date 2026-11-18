@@ -53,6 +53,11 @@
               <option>Autre</option>
             </select>
           </div>
+          <!-- Piège anti-robots : invisible pour les humains, rempli par les robots. -->
+          <div class="hp" aria-hidden="true">
+            <label for="site-web">Ne pas remplir ce champ</label>
+            <input id="site-web" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
           <label class="consent">
             <input type="checkbox" name="consent" required>
             <span>J'accepte de recevoir un email au lancement de Vary et, éventuellement, une courte enquête. Désinscription à tout moment. <a href="confidentialite.html">Confidentialité</a></span>
@@ -240,7 +245,7 @@
   </main>
 
   <footer class="footer wrap">
-    <span>© 2026 Galbe Studio · Vary (nom provisoire)</span>
+    <span>© 2026 Jordan Marcos · Galbe Studio · Vary (nom provisoire)</span>
     <nav aria-label="Liens légaux">
       <a href="mentions-legales.html">Mentions légales</a>
       <a href="confidentialite.html">Confidentialité</a>

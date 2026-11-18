@@ -9,6 +9,16 @@ const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_drxF49pDfSKSCFCX9rZOmw_zdyWcGI8
 
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
+// Anti-robots : un humain met plus de 3 secondes à remplir le formulaire,
+// et ne voit pas le champ piège « website ».
+const MIN_FILL_MS = 3000;
+const pageLoadedAt = Date.now();
+
+function looksLikeBot(form) {
+  const trap = form.querySelector('input[name="website"]');
+  return (trap && trap.value !== "") || Date.now() - pageLoadedAt < MIN_FILL_MS;
+}
+
 function setMessage(form, text, kind) {
   const msg = form.querySelector(".signup__msg");
   msg.textContent = text;
@@ -52,6 +62,14 @@ document.querySelectorAll("form.signup").forEach((form) => {
     if (!consentInput.checked) {
       consentInput.focus();
       setMessage(form, "Coche la case pour qu'on puisse te prévenir au lancement.", "error");
+      return;
+    }
+
+    // Robot détecté : on affiche le même message de succès, sans rien enregistrer,
+    // pour ne pas lui indiquer qu'il a été repéré.
+    if (looksLikeBot(form)) {
+      form.classList.add("is-done");
+      setMessage(form, "C'est noté ! Tu seras parmi les premiers prévenus au lancement de Vary.", "ok");
       return;
     }
 

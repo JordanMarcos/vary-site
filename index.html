@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vary · Sache enfin combien tu vas toucher</title>
+  <meta name="description" content="Vary calcule en temps réel ton reste à faire et ton variable, en brut et en net estimé. L'app des commerciaux salariés en France. Rejoins la liste d'attente.">
+  <meta property="og:title" content="Vary · Sache enfin combien tu vas toucher">
+  <meta property="og:description" content="Ton reste à faire et ton variable net estimé, en temps réel. Pour les commerciaux salariés en France.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#ECECE8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#" aria-label="Vary, accueil">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l6 9 10-13"/></svg>
+        </span>
+        <span class="brand__name">Vary</span>
+      </a>
+      <a class="btn btn--small" href="#inscription">Rejoindre la liste</a>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- HERO -->
+    <section class="hero wrap">
+      <div class="hero__text">
+        <p class="eyebrow">Pour les commerciaux salariés en France</p>
+        <h1>Sache enfin combien tu vas toucher.</h1>
+        <p class="lead">Vary suit tes ventes et calcule en temps réel ton <strong>reste à faire</strong> et ton <strong>variable</strong>, en brut et en <strong>net estimé</strong>. Fini le tableur bricolé et la surprise sur la fiche de paie.</p>
+
+        <form class="signup" id="inscription" novalidate>
+          <div class="signup__row">
+            <label class="sr-only" for="email-hero">Ton email</label>
+            <input id="email-hero" name="email" type="email" inputmode="email" autocomplete="email" placeholder="ton.email@exemple.fr" required>
+            <button class="btn" type="submit">Je veux l'accès anticipé</button>
+          </div>
+          <div class="signup__row signup__row--small">
+            <label for="secteur-hero">Ton secteur <span class="muted">(facultatif)</span></label>
+            <select id="secteur-hero" name="sector">
+              <option value="">Choisir</option>
+              <option>B2B, logiciel, services</option>
+              <option>Distribution, retail</option>
+              <option>Automobile</option>
+              <option>Immobilier</option>
+              <option>Banque, assurance</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span>J'accepte de recevoir un email au lancement de Vary et, éventuellement, une courte enquête. Désinscription à tout moment. <a href="confidentialite.html">Confidentialité</a></span>
+          </label>
+          <p class="signup__msg" role="status" aria-live="polite"></p>
+        </form>
+        <p class="note">App iOS et Android en préparation. Les inscrits sont prévenus en premier.</p>
+      </div>
+
+      <div class="hero__visual" role="img" aria-label="Aperçu de l'app Vary : reste à faire 34 200 €, objectif atteint à 62 %, variable net estimé 1 255 €">
+        <div class="phone" aria-hidden="true">
+          <div class="phone__head">
+            <span class="phone__mark"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l6 9 10-13"/></svg></span>
+            <span><b>Salut Léa</b><small>Trimestre 4 · 2026</small></span>
+          </div>
+          <div class="olive card-hero">
+            <div class="card-hero__top"><span>Reste à faire</span><span class="chip">43 jours restants</span></div>
+            <div class="card-hero__big">34 200 €</div>
+            <div class="gauge">
+              <span style="flex:80"><i style="width:77.5%"></i></span>
+              <span style="flex:20"><i style="width:0"></i></span>
+              <span style="flex:20"><i style="width:0"></i></span>
+            </div>
+            <div class="gauge__legend"><span style="flex:80">3 % jusqu'à 80 %</span><span style="flex:20">5 %</span><span style="flex:20">8 %</span></div>
+            <div class="card-hero__stats">
+              <span><small>Réalisé</small>55 800 €</span>
+              <span><small>Objectif</small>90 000 €</span>
+              <span><small>Atteinte</small>62 %</span>
+            </div>
+          </div>
+          <div class="phone__card">
+            <div class="phone__row"><b>Variable estimé</b><span class="toggle"><span>Brut</span><span class="on">Net</span></span></div>
+            <div class="phone__amount">1 255 € <span class="badge">estimé</span></div>
+            <small>1 674 € brut</small>
+          </div>
+          <div class="phone__card phone__card--tip">
+            <b>Encore 16 200 € pour passer à 5 %</b>
+            <small>Au-delà de 72 000 €, chaque vente te rapporte plus.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLÈME -->
+    <section class="section wrap">
+      <h2>Ton variable ne devrait pas être une surprise.</h2>
+      <div class="grid3">
+        <article class="card">
+          <h3>Des règles illisibles</h3>
+          <p>Paliers, primes, accélérateurs, base sur la marge : ton plan est clair pour les RH, beaucoup moins pour toi.</p>
+        </article>
+        <article class="card">
+          <h3>Un tableur bricolé</h3>
+          <p>Tu recopies tes ventes dans un Google Sheet que tu es le seul à comprendre, quand tu as le temps.</p>
+        </article>
+        <article class="card">
+          <h3>Le net, mystère total</h3>
+          <p>Tu connais vaguement ton brut. Ce qui arrive vraiment sur ton compte, tu le découvres sur la fiche de paie.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMMENT ÇA MARCHE -->
+    <section class="section wrap">
+      <h2>Comment ça marche</h2>
+      <ol class="steps">
+        <li class="card">
+          <span class="steps__num">1</span>
+          <h3>Ton plan en 2 minutes</h3>
+          <p>Cadre ou non-cadre, ton fixe, ton objectif, puis un modèle de plan pré-rempli que tu ajustes.</p>
+        </li>
+        <li class="card">
+          <span class="steps__num">2</span>
+          <h3>Une vente en 5 secondes</h3>
+          <p>Un montant, une catégorie, c'est enregistré. Entre deux rendez-vous, sans réfléchir.</p>
+        </li>
+        <li class="card">
+          <span class="steps__num">3</span>
+          <h3>Ton net en temps réel</h3>
+          <p>Reste à faire, prochain palier, variable brut et net estimé : tout se met à jour instantanément.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- FONCTIONS -->
+    <section class="section wrap">
+      <h2>Fait pour les vrais plans de variable</h2>
+      <div class="features">
+        <article class="olive feature feature--big">
+          <h3>Le net estimé, gratuit</h3>
+          <p>Vary passe ton variable du brut au net avec ton taux de cotisations, et ton prélèvement à la source si tu veux. Toujours affiché comme une estimation.</p>
+        </article>
+        <article class="card feature">
+          <h3>Paliers et accélérateurs</h3>
+          <p>Progressifs ou rétroactifs, sur le CA ou sur la marge, avec un taux boosté au-delà de l'objectif.</p>
+        </article>
+        <article class="card feature">
+          <h3>Primes par vente</h3>
+          <p>Un montant par contrat, par option ou par catégorie de produit, plus les primes d'objectif.</p>
+        </article>
+        <article class="card feature">
+          <h3>Simulateur</h3>
+          <p>« Et si je signe ce deal ? » Un curseur, et tu vois ton variable net bouger.</p>
+        </article>
+        <article class="card feature">
+          <h3>Tous les secteurs</h3>
+          <p>B2B, distribution, automobile, immobilier, assurance : si ton plan a des règles, Vary sait les suivre.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONFIDENTIALITÉ -->
+    <section class="section wrap">
+      <div class="privacy card">
+        <div class="privacy__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        </div>
+        <div>
+          <h2>Tes chiffres restent sur ton téléphone.</h2>
+          <p>Pas de compte, pas de serveur qui stocke ton salaire. Ton plan et tes ventes ne quittent pas ton appareil.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIX -->
+    <section class="section wrap">
+      <h2>Prix envisagés au lancement</h2>
+      <div class="pricing">
+        <article class="card plan">
+          <h3>Gratuit</h3>
+          <p class="plan__price">0 €</p>
+          <ul>
+            <li>Reste à faire en temps réel</li>
+            <li>Variable brut et net estimé</li>
+            <li>Commission simple, prime par vente, prime d'objectif</li>
+            <li>Période en cours</li>
+          </ul>
+        </article>
+        <article class="card plan plan--premium">
+          <h3>Premium</h3>
+          <p class="plan__price">2,99 € <small>/ mois</small></p>
+          <p class="muted">ou 19,99 € par an</p>
+          <ul>
+            <li>Tout le gratuit</li>
+            <li>Paliers et accélérateurs</li>
+            <li>Simulateur</li>
+            <li>Historique des périodes passées</li>
+            <li>Export de tes données</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section wrap">
+      <h2>Questions fréquentes</h2>
+      <div class="faq">
+        <details>
+          <summary>Le net affiché est-il exact ?</summary>
+          <p>C'est une estimation : ton variable brut moins tes cotisations salariales (taux par défaut selon ton statut, modifiable), et ton prélèvement à la source si tu le renseignes. Pour coller au plus près, tu peux calculer ton propre taux à partir de ta fiche de paie.</p>
+        </details>
+        <details>
+          <summary>Mes données de salaire sont-elles envoyées quelque part ?</summary>
+          <p>Non. Dans l'app, ton plan et tes ventes restent sur ton téléphone. Seules des statistiques d'usage anonymes, sans aucun montant, servent à améliorer l'app.</p>
+        </details>
+        <details>
+          <summary>Quand l'app sort-elle ?</summary>
+          <p>Elle est en cours de développement pour iOS et Android. Les inscrits à la liste d'attente sont prévenus en premier.</p>
+        </details>
+        <details>
+          <summary>Je suis agent commercial indépendant, c'est pour moi ?</summary>
+          <p>Pas encore : le calcul du net d'un indépendant est différent. La première version vise les commerciaux salariés. Inscris-toi quand même, ça nous aide à savoir si on doit l'ajouter.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section wrap">
+      <div class="olive cta">
+        <h2>Prêt à savoir ce que tu vas toucher ?</h2>
+        <p>Laisse ton email, on te prévient au lancement.</p>
+        <a class="btn btn--light" href="#inscription">Rejoindre la liste d'attente</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <span>© 2026 Galbe Studio · Vary (nom provisoire)</span>
+    <nav aria-label="Liens légaux">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+    </nav>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
